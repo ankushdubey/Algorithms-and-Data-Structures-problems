@@ -37,8 +37,14 @@ public:
 	}
     vector<int> traversalPath(vector<vector<int>>& matrix, int currPosX, int currPosY, int dirToMove, int stepsToMove) {
         vector<int> res;
-		currPosX=moveX(currPosX,dirToMove);
-		currPosY=moveY(currPosY,dirToMove);
+		int tempx=currPosX;
+		int tempy=currPosY;
+		for(int i=0;i<stepsToMove;i++)
+		{
+			moveX(tempx,dirToMove);
+			moveY(tempy,dirToMove);
+		}
+
 		if(matrix.size()==0)
 		{
 			res.push_back(-1);
@@ -54,14 +60,9 @@ public:
 
 		int n=matrix.size();
 		int m=matrix[0].size();
-		if(valid(currPosX,currPosX,n,m)==false){
-			res.push_back(-1);
+		if(valid(tempx,tempy,n,m)==false)
 			return res;
-		}
-		res.push_back(matrix[currPosX][currPosY]);
-		stepsToMove--;
-		if(stepsToMove==0)
-			return res;
+		
 		while(true)
 		{
 			currPosX=moveX(currPosX,dirToMove);
