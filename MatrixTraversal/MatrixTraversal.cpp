@@ -49,6 +49,9 @@ public:
 			res.push_back(-1);
 			return res;
 		}
+		if(stepsToMove==0)
+			return res;
+
 		int n=matrix.size();
 		int m=matrix[0].size();
 		if(valid(currPosX,currPosX,n,m)==false){
@@ -56,14 +59,18 @@ public:
 			return res;
 		}
 		res.push_back(matrix[currPosX][currPosY]);
+		stepsToMove--;
+		if(stepsToMove==0)
+			return res;
 		while(true)
 		{
 			currPosX=moveX(currPosX,dirToMove);
 			currPosY=moveY(currPosY,dirToMove);
 
-			if(valid(currPosX,currPosY,n,m))
+			if(valid(currPosX,currPosY,n,m) && stepsToMove>0)
 			{
 				res.push_back(matrix[currPosX][currPosY]);
+				stepsToMove--;
 			}
 			else
 				break;
