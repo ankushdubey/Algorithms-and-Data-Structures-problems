@@ -7,6 +7,7 @@ using namespace std;
 class SpiralMatrix {
 public:
     // Implement your solution by completing the below function	
+	// Also submitted on my leetcode account https://leetcode.com/user1329f/
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
         vector<int> res;
 		if(matrix.size()==0)
@@ -26,7 +27,7 @@ public:
 			for(int k=m-2;k>=j;--k)
 				res.push_back(matrix[n-1][k]);
 			}
-			if(j < n-1){
+			if(j < m-1){
 			for(int k=n-2;k>i;--k)
 				res.push_back(matrix[k][j]);
 			}
