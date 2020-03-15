@@ -13,7 +13,7 @@ public:
 		i=0;j=0;
 		n=matrix.size();
 		m=matrix[0].size();
-		while(i<=n && j<=m){
+		while(i<n && j<m){
 			for(int k=i;k<m;k++)
 				res.push_back(matrix[i][k]);
 			for(int k=j+1;k<n;k++)
