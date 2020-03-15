@@ -14,7 +14,7 @@ public:
 		char index=digits[0];
 		string fil=options[index-'0'];
 		if(fil.size()>0){
-		for(int i=0;i<fil.size();i++)
+		for(int i=0;i<(int)fil.size();i++)
             {
                 res.push_back(string(1,fil[i]));
             }
@@ -22,14 +22,14 @@ public:
 		else{
             res.push_back("");
 		}
-		for(int k=1;k<digits.size();k++)
+		for(int k=1;k<(int))digits.size();k++)
         {
             index=digits[k];
             fil=options[index-'0'];
             if(fil.size()>0)
             {
                 int ini=res.size();
-                for(int i=0;i<fil.size();i++)
+                for(int i=0;i<(int)fil.size();i++)
                 {
                     for(int j=0;j<ini;j++)
                     {
@@ -41,7 +41,7 @@ public:
             }
         }
         sort(res.begin(),res.end());
-        for(int i=0;i<res.size();i++)
+        for(int i=0;i<(int))res.size();i++)
         {
             cout<<res[i]<<endl;
         }
