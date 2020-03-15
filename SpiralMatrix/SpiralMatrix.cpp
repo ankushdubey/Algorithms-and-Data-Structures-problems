@@ -17,16 +17,16 @@ public:
 			for(int k=i;k<m;k++)
 				res.push_back(matrix[i][k]);
 			i++;
-			for(int k=i;k<n-1;k++)
+			for(int k=i;k<n;k++)
 				res.push_back(matrix[k][m-1]);
 			m--;
 			if(i<n){
-			for(int k=m-1;k>j;--k)
+			for(int k=m-1;k>=j;--k)
 				res.push_back(matrix[n-1][k]);
 			n--;
 			}
 			if(j<m){
-			for(int k=n-1;k>i;--k)
+			for(int k=n-1;k>=i;--k)
 				res.push_back(matrix[k][i]);
 			j++;
 			}
