@@ -16,14 +16,16 @@ public:
 		while(i<n && j<m){
 			for(int k=i;k<m;k++)
 				res.push_back(matrix[i][k]);
-			for(int k=j+1;k<n-1;k++)
+			i++;
+			for(int k=i;k<n-1;k++)
 				res.push_back(matrix[k][m-1]);
-			for(int k=m-1;k>=j;--k)
+			m--;
+			for(int k=m;k>=j;--k)
 				res.push_back(matrix[n-1][k]);
-			for(int k=n-2;k>j;--k)
+			for(int k=n-2;k>i;--k)
 				res.push_back(matrix[k][i]);
 			
-			i++;j++;m--;n--;
+			j++;m--;n--;
 		}
         return res;
     }
