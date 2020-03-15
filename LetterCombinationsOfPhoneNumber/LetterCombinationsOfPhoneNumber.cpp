@@ -8,7 +8,9 @@ string options[] = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
 class LetterCombinationsOfPhoneNumber {
 public:
     // Implement your solution by completing the below function
-		vector<string> res;
+
+    vector<string> letterCombinations(string digits) {
+    	vector<string> res;
 		char index=digits[0];
 		string fil=options[index-'0'];
 		if(fil.size()>0){
