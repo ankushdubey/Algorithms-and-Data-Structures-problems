@@ -69,7 +69,7 @@ public:
 			currPosX=moveX(currPosX,dirToMove);
 			currPosY=moveY(currPosY,dirToMove);
 
-			if(valid(currPosX,currPosY,n,m) && stepsToMove>0)
+			if(stepsToMove>0)
 			{
 				res.push_back(matrix[currPosX][currPosY]);
 				stepsToMove--;
