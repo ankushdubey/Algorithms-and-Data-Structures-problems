@@ -45,6 +45,7 @@ public:
 			res.push_back(-1);
 			return res;
 		}
+		res.push_back(matrix[currPosX][currPosY]);
 		while(true)
 		{
 			currPosX=moveX(currPosX,dirToMove);
