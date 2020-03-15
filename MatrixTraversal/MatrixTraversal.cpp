@@ -39,6 +39,16 @@ public:
         vector<int> res;
 		currPosX=moveX(currPosX,dirToMove);
 		currPosY=moveY(currPosY,dirToMove);
+		if(matrix.size()==0)
+		{
+			res.push_back(-1);
+			return res;
+		}
+		if(matrix.size()!=0 && matrix[0].size()==0)
+		{
+			res.push_back(-1);
+			return res;
+		}
 		int n=matrix.size();
 		int m=matrix[0].size();
 		if(valid(currPosX,currPosX,n,m)==false){
@@ -56,11 +66,8 @@ public:
 				res.push_back(matrix[currPosX][currPosY]);
 			}
 			else
-			{
 				break;
-			}
 		}
-		
         return res;
     }
 };
