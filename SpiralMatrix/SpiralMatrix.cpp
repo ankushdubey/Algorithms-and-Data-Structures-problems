@@ -21,7 +21,7 @@ public:
 			for(int k=m-2;k>=j;--k)
 				res.push_back(matrix[n-1][k]);
 			for(int k=n-2;k>i;--k)
-				res.push_back(matrix[k][k]);
+				res.push_back(matrix[k][i]);
 
 			i++;j++;--n;--m;
 		}
