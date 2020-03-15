@@ -1,1 +1,10 @@
- 
+ad
+ae
+af
+bd
+be
+bf
+cd
+ce
+cf
+ad ae af bd be bf cd ce cf 

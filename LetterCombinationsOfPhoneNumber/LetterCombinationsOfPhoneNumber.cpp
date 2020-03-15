@@ -41,10 +41,7 @@ public:
             }
         }
         sort(res.begin(),res.end());
-        for(int i=0;i<(int)res.size();i++)
-        {
-            cout<<res[i]<<endl;
-        }
+        
         return res;
     }
 };
