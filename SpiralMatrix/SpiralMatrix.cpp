@@ -14,14 +14,14 @@ public:
 		n=matrix.size();
 		m=matrix[0].size();
 		while(i<n && j<m){
-			for(int k=i;k<m;k++)
+			for(int k=j;k<m;k++)
 				res.push_back(matrix[i][k]);
-			for(int k=j+1;k<n;k++)
+			for(int k=i+1;k<n;k++)
 				res.push_back(matrix[k][m-1]);
 			for(int k=m-2;k>=j;--k)
 				res.push_back(matrix[n-1][k]);
-			for(int k=n-2;k>j;--k)
-				res.push_back(matrix[k][i]);
+			for(int k=n-2;k>i;--k)
+				res.push_back(matrix[k][j]);
 			
 			i++;j++;m--;n--;
 		}
