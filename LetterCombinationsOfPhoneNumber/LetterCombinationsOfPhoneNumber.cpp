@@ -6,8 +6,12 @@ using namespace std;
 class LetterCombinationsOfPhoneNumber {
 public:
     // Implement your solution by completing the below function
+
+	string options[]={"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+
     vector<string> letterCombinations(string digits) {
     	vector<string> res;
+		res.push_back(options[0]);	
 
         return res;
     }
