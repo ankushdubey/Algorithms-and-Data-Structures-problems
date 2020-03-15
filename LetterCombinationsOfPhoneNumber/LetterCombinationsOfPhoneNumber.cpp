@@ -22,7 +22,7 @@ public:
 		else{
             res.push_back("");
 		}
-		for(int k=1;k<(int))digits.size();k++)
+		for(int k=1;k<(int)digits.size();k++)
         {
             index=digits[k];
             fil=options[index-'0'];
