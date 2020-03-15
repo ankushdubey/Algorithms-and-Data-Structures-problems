@@ -3,11 +3,11 @@
 #include "../crio/cpp/io/PrintMatrix.hpp"
 using namespace std;
 
+string options[] = {"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+
 class LetterCombinationsOfPhoneNumber {
 public:
     // Implement your solution by completing the below function
-
-	string options[]={"","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
 
     vector<string> letterCombinations(string digits) {
     	vector<string> res;
