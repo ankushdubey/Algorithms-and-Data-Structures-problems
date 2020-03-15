@@ -9,6 +9,10 @@ public:
     // Implement your solution by completing the below function	
     vector<int> spiralOrder(vector<vector<int>>& matrix) {
         vector<int> res;
+		if(matrix.size()==0)
+			return res;
+		if(matrix.size()!=0 && matrix[0].size()==0)
+			return res;
 		int i,j,n,m;
 		i=0;j=0;
 		n=matrix.size();
