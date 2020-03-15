@@ -4,7 +4,7 @@ using namespace std;
 // Implement your solution by completing the below function
 bool canMessageBePassed(int n, vector<vector<int> > maze) {
         bool possible = true;
-
+               
 	return possible;
 }
 
