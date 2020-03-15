@@ -42,7 +42,7 @@ public:
             start=i,j=i+1;
             int end=intervals[start][1];
             //cout<<intervals[i][0]<<endl;
-            while(j!=intervals.size() && end>=intervals[j][0]){
+            while(j!=sz && end>=intervals[j][0]){
                 end=max(end,intervals[j][1]);
                 j++;
                 flag=1;
