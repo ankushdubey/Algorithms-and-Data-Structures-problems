@@ -67,7 +67,7 @@ public:
         res[ctr].push_back(intervals[sz-1][1]);
         }
         vector<vector<int> > ans;
-        for(int i=0;i<res.size();i++)
+        for(int i=0;i<(int)res.size();i++)
         {
             if(res[i].size()>0)
                 ans.push_back(res[i]);
