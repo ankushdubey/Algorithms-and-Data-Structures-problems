@@ -52,7 +52,7 @@ public:
 
 			if(valid(currPosX,currPosY,n,m))
 			{
-				cout<<matrix[currPosX][currPosY]<<endl;
+				res.push_back(matrix[currPosX][currPosY]);
 			}
 			else
 			{
