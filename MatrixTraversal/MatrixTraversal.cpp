@@ -7,9 +7,59 @@ using namespace std;
 class MatrixTraversal {
 public:
     // Implement your solution by completing the below function	
+	int moveX(int x,int dir)
+	{
+		if(dir==1)
+			return x;
+		if(dir==2)
+			return x+1;
+		if(dir==3)
+			return x;
+		if(dir==4)
+			return x-1;
+	}
+	int moveY(int y,int dir)
+	{
+		if(dir==1)
+			return y+1;
+		if(dir==2)
+			return y;
+		if(dir==3)
+			return y-1;
+		if(dir==4)
+			return y;
+	}
+	bool valid(int x,int y,int n,int m)
+	{
+		if(x>=0 && x<n && y>=0 && y<m)
+			return true;
+		return false;
+	}
     vector<int> traversalPath(vector<vector<int>>& matrix, int currPosX, int currPosY, int dirToMove, int stepsToMove) {
         vector<int> res;
-	
+		currPosX=moveX(currPosX,dirToMove);
+		currPosY=moveY(currPosY,dirToMove);
+		int n=matrix.size();
+		int m=matrix[0].size();
+		if(valid(currPosX,currPosX,n,m)==false){
+			res.push_back(-1);
+			return res;
+		}
+		while(true)
+		{
+			currPosX=moveX(currPosX,dirToMove);
+			currPosY=moveY(currPosY,dirToMove);
+
+			if(valid(currPosX,currPosY,n,m))
+			{
+				cout<<matrix[currPosX][currPosY]<<endl;
+			}
+			else
+			{
+				break;
+			}
+		}
+		
         return res;
     }
 };
