@@ -18,10 +18,14 @@ public:
 				res.push_back(matrix[i][k]);
 			for(int k=i+1;k<n;k++)
 				res.push_back(matrix[k][m-1]);
+			if(i+1 < n){
 			for(int k=m-2;k>=j;--k)
 				res.push_back(matrix[n-1][k]);
+			}
+			if(j < n-1){
 			for(int k=n-2;k>i;--k)
 				res.push_back(matrix[k][j]);
+			}
 			
 			i++;j++;m--;n--;
 		}
