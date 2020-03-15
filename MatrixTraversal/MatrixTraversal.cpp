@@ -41,8 +41,8 @@ public:
 		int tempy=currPosY;
 		for(int i=0;i<stepsToMove;i++)
 		{
-			moveX(tempx,dirToMove);
-			moveY(tempy,dirToMove);
+			tempx=moveX(tempx,dirToMove);
+			tempy=moveY(tempy,dirToMove);
 		}
 
 		if(matrix.size()==0)
@@ -60,6 +60,7 @@ public:
 
 		int n=matrix.size();
 		int m=matrix[0].size();
+		
 		if(valid(tempx,tempy,n,m)==false)
 			return res;
 		
