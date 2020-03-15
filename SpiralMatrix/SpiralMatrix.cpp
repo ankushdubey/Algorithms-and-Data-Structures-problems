@@ -20,12 +20,16 @@ public:
 			for(int k=i;k<n-1;k++)
 				res.push_back(matrix[k][m-1]);
 			m--;
-			for(int k=m;k>=j;--k)
+			if(i<n){
+			for(int k=m-1;k>=j;--k)
 				res.push_back(matrix[n-1][k]);
-			for(int k=n-2;k>i;--k)
+			n--;
+			}
+			if(j<m){
+			for(int k=n-1;k>=i;--k)
 				res.push_back(matrix[k][i]);
-			
-			j++;m--;n--;
+			j++;
+			}
 		}
         return res;
     }
