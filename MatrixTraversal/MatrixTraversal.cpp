@@ -15,7 +15,7 @@ public:
 			return x+1;
 		if(dir==3)
 			return x;
-		if(dir==4)
+		
 			return x-1;
 	}
 	int moveY(int y,int dir)
@@ -26,7 +26,7 @@ public:
 			return y;
 		if(dir==3)
 			return y-1;
-		if(dir==4)
+		
 			return y;
 	}
 	bool valid(int x,int y,int n,int m)
