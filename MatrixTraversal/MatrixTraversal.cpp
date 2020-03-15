@@ -44,25 +44,25 @@ public:
 			tempx=moveX(tempx,dirToMove);
 			tempy=moveY(tempy,dirToMove);
 		}
-
 		if(matrix.size()==0)
 		{
-			res.push_back(-1);
 			return res;
 		}
 		if(matrix.size()!=0 && matrix[0].size()==0)
 		{
+			return res;
+		}		
+		int n=matrix.size();
+		int m=matrix[0].size();
+		if(valid(currPosX,currPosY,n,m)==false)
+		{
 			res.push_back(-1);
 			return res;
 		}
-		if(stepsToMove==0)
+		if(valid(tempx,tempy,n,m)==false){
+			res.push_back(-1);
 			return res;
-
-		int n=matrix.size();
-		int m=matrix[0].size();
-		
-		if(valid(tempx,tempy,n,m)==false)
-			return res;
+		}
 		
 		while(true)
 		{
