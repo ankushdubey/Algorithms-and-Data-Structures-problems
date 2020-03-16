@@ -142,7 +142,7 @@ bool canMessageBePassed(int n, vector<vector<int> > maze)
         //cout<<ans.size()<<endl;
         if(ans.size()>0){
         if(ans.size()>1)
-                return !possible;
+                return false;
         int lst=ans.size();
         if(ans[lst-1][1] < n*n - 1)
             possible=false;
