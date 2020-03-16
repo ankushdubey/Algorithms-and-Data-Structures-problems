@@ -10,7 +10,7 @@ public:
 		if(str.size()==0)
 		return ans;
 		string fin;
-		for(int i=0;i<str.size();i++)
+		for(int i=0;i<(int)str.size();i++)
 		{
 			if(str[i]!=' ' && (int(str[i])>=48 && int(str[i])<=57))	
 			{
