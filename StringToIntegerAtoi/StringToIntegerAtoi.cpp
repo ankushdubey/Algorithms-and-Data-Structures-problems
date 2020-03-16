@@ -23,13 +23,13 @@ public:
 				ind=i;
 			}
 		}
-		int i=0;
+		
 		if((int)fin.size()==0)
 			return ans;
 		int flag=0;
 		for(int j=ind;j<(int)str.size();j++)
 		{
-			if(str[i]!=' ' && (int(str[i])>=48 && int(str[i])<=57))	
+			if(str[j]!=' ' && (int(str[j])>=48 && int(str[j])<=57))	
 			{
 				flag=1;
 			}
@@ -37,6 +37,7 @@ public:
 		if(flag==0)
 			sign=1;
 		
+		int i=0;
 		while(fin[i]=='0')
 		{
 			i++;
