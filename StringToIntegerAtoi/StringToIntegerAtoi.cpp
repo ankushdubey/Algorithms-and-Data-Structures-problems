@@ -29,6 +29,8 @@ public:
 		fin=fin.substr(i,(int)fin.size()-i);
 		stringstream answer(fin);
 		answer>>ans;
+		if(ans==0)
+			sign=1;
         return ans*sign;
     }
 };
