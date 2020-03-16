@@ -44,6 +44,11 @@ public:
 	}
     int numIslands(vector<string>& grid) {
         int x = 0;
+		if(grid.size()==0)
+		return x;
+		if(grid.size()!=0 && grid[0].size()==0)
+		return x;
+		
 		n=grid.size();
 		m=grid[0].size();
 		for(int i=0;i<n;i++)
