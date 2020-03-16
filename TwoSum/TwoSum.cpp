@@ -18,8 +18,8 @@ public:
 		{
 			if(mp.find(target-nums[i])!=mp.end() && mp[target-nums[i]]!=mp[nums[i]])
 			{
-				v.push_back(i);
-				v.push_back(mp[target-nums[i]]);
+				v[0]=i;
+				v[1]=mp[target-nums[i]];
 			}
 		}
 		sort(v.begin(),v.end());
