@@ -10,7 +10,7 @@ public:
 		if(str.size()==0)
 		return ans;
 		string fin="";
-		int sign=1;
+		int sign=1,temp_flag=1;
 		int ind;
 		for(int i=0;i<(int)str.size();i++)
 		{
@@ -18,9 +18,10 @@ public:
 			{
 				fin.push_back(str[i]);
 			}
-			if(str[i]=='-'){
+			if(str[i]=='-' && temp_flag==1){
 				sign=-1;
 				ind=i;
+				temp_flag=0;
 			}
 		}
 		
