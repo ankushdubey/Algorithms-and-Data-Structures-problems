@@ -53,13 +53,22 @@ public:
 
 		n = grid.size();
 		m = grid[0].size();
+		int cnt1=0,cnt0=0;
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j < m; j++)
 			{
 				vis[i][j] = false;
+				if(grid[i][j]=='1')
+				cnt1++;
+				if(grid[i][j]=='0')
+				cnt0++;
 			}
 		}
+		if(cnt0==0)
+			return cnt1;
+		if(cnt1==0)
+			return cnt0;
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j < m; j++)
