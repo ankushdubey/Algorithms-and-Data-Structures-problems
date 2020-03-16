@@ -26,7 +26,7 @@ public:
 		if((int)fin.size()==0)
 			return ans;
 		int flag=0;
-		for(int i=ind;i<str.size();i++)
+		for(int j=ind;j<str.size();j++)
 		{
 			if(str[i]!=' ' && (int(str[i])>=48 && int(str[i])<=57))	
 			{
