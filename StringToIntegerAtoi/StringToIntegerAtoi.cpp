@@ -26,7 +26,7 @@ public:
 		}
 		
 		if((int)fin.size()==0)
-			return ans;
+			return 0;
 		
 		int flag=0;
 		for(int j=ind;j<(int)str.size();j++)
@@ -45,7 +45,7 @@ public:
 			i++;
 		}
 		if(i==(int)fin.size())
-			return ans;
+			return 0;
 		
 		string final;
 		final=fin.substr(i,(int)fin.size()-i);
