@@ -11,17 +11,20 @@ public:
 		return ans;
 		string fin;
 		int sign=1;
+		int flag=1;
 		for(int i=0;i<(int)str.size();i++)
 		{
 			if(str[i]!=' ' && (int(str[i])>=48 && int(str[i])<=57))	
 			{
 				fin.push_back(str[i]);
+				flag=0;
 			}
 			if(str[i]=='-')
 				sign=-1;
-			
 		}
 		int i=0;
+		if(fin.size()==0)
+			return 0;
 		while(fin[i]=='0')
 		{
 			i++;
