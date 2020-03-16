@@ -8,7 +8,7 @@ public:
     int myAtoi(string str) {
     	int ans = 0;
 		if(str.size()==0)
-		return ans;
+			return ans;
 		string fin="";
 		int sign=1,temp_flag=1;
 		int ind;
@@ -27,6 +27,7 @@ public:
 		
 		if((int)fin.size()==0)
 			return ans;
+		
 		int flag=0;
 		for(int j=ind;j<(int)str.size();j++)
 		{
@@ -45,8 +46,11 @@ public:
 		}
 		if(i==(int)fin.size())
 			return ans;
-		fin=fin.substr(i,(int)fin.size()-i);
-		stringstream answer(fin);
+		
+		string final;
+		final=fin.substr(i,(int)fin.size()-i);
+
+		stringstream answer(final);
 		answer>>ans;
         return ans*sign;
     }
