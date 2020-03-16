@@ -20,6 +20,7 @@ public:
 			}
 			if(str[i]=='-'){
 				sign=-1;
+				ind=i;
 			}
 		}
 		int i=0;
