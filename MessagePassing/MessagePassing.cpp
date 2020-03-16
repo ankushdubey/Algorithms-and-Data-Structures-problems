@@ -131,7 +131,7 @@ bool canMessageBePassed(int n, vector<vector<int>> maze)
         int lst = ans.size();
         if (ans[lst - 1][1] < n * n - 1)
                 possible = false;
-
+        cout<<possible;
         return possible;
 }
 
