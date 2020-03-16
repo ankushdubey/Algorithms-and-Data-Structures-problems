@@ -65,10 +65,12 @@ public:
 				cnt0++;
 			}
 		}
-		if(cnt0==0)
-			return cnt1;
+		if(cnt0==0){
+			return 1;
+		}
 		if(cnt1==0)
-			return cnt0;
+			return 0;
+		
 		for (int i = 0; i < n; i++)
 		{
 			for (int j = 0; j < m; j++)
