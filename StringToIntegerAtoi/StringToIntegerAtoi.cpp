@@ -10,12 +10,16 @@ public:
 		if(str.size()==0)
 		return ans;
 		string fin;
+		int sign=1;
 		for(int i=0;i<(int)str.size();i++)
 		{
 			if(str[i]!=' ' && (int(str[i])>=48 && int(str[i])<=57))	
 			{
 				fin.push_back(str[i]);
 			}
+			if(str[i]=='-')
+				sign=-1;
+			
 		}
 		int i=0;
 		while(fin[i]=='0')
@@ -25,7 +29,7 @@ public:
 		fin=fin.substr(i,(int)fin.size()-i);
 		stringstream answer(fin);
 		answer>>ans;
-        return ans;
+        return ans*sign;
     }
 };
 
