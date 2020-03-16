@@ -66,10 +66,13 @@ public:
 			}
 		}
 		if(cnt0==0){
-			return 1;
+			x=1;
+			return x;
 		}
-		if(cnt1==0)
-			return 0;
+		if(cnt1==0){
+			x=0;
+			return x;
+		}
 		
 		for (int i = 0; i < n; i++)
 		{
