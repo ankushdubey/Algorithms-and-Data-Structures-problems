@@ -9,20 +9,33 @@ public:
     	int ans = 0;
 		if(str.size()==0)
 		return ans;
-		string fin;
+		string fin="";
 		int sign=1;
+		int ind;
 		for(int i=0;i<(int)str.size();i++)
 		{
 			if(str[i]!=' ' && (int(str[i])>=48 && int(str[i])<=57))	
 			{
 				fin.push_back(str[i]);
 			}
-			if(str[i]=='-')
+			if(str[i]=='-'){
 				sign=-1;
+			}
 		}
 		int i=0;
-		if(fin.size()==0)
-			return 0;
+		if((int)fin.size()==0)
+			return ans;
+		int flag=0;
+		for(int i=ind;i<str.size();i++)
+		{
+			if(str[i]!=' ' && (int(str[i])>=48 && int(str[i])<=57))	
+			{
+				flag=1;
+			}
+		}
+		if(flag==0)
+			sign=1;
+		
 		while(fin[i]=='0')
 		{
 			i++;
