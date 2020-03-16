@@ -21,9 +21,9 @@ public:
 		{
 			if(mp.find(target-nums[i])!=mp.end())
 			{
-				if((mp[target-nums[i]]!=mp[nums[i]])){
-				v[0]=i;
-				v[1]=mp[target-nums[i]];
+				if((mp[target-nums[i]]!=mp[nums[i]]) && (target!=(2*nums[i]))){
+					v[0]=i;
+					v[1]=mp[target-nums[i]];
 				}
 				else if(mp2[target-nums[i]]>1){
 					flag=1;
