@@ -3,7 +3,7 @@
 #include "../crio/cpp/io/ReadMatrix.hpp"
 #include "../crio/cpp/io/PrintMatrix.hpp"
 using namespace std;
-int vis[1000][1000];
+bool vis[10000][10000];
 int n,m;
 class NumberOfIslands {
 public:
@@ -48,7 +48,7 @@ public:
 		return x;
 		if(grid.size()!=0 && grid[0].size()==0)
 		return x;
-		
+
 		n=grid.size();
 		m=grid[0].size();
 		for(int i=0;i<n;i++)
