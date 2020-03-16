@@ -26,7 +26,7 @@ public:
 		{
 			i++;
 		}
-		if(i==fin.size())
+		if(i==(int)fin.size())
 			return ans;
 		fin=fin.substr(i,(int)fin.size()-i);
 		stringstream answer(fin);
