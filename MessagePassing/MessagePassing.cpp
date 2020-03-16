@@ -113,6 +113,12 @@ vector<vector<int> > merge(vector<vector<int> > intervals)
 bool canMessageBePassed(int n, vector<vector<int> > maze)
 {
         bool possible = true;
+        if(maze.size()==0)
+                return possible;
+        if(maze.size()!=0 && maze[0].size()==0)
+                return possible;
+        if(n==1)
+                return possible;
         vector<int> spi = spiralOrder(maze);
 
         vector<vector<int> > ranges((int)spi.size());
@@ -134,10 +140,11 @@ bool canMessageBePassed(int n, vector<vector<int> > maze)
         }
         vector<vector<int> > ans = merge(ranges_ans);
         //cout<<ans.size()<<endl;
+        if(ans.size()>0){
         int lst=ans.size();
         if(ans[lst-1][1] < n*n - 1)
             possible=false;
-
+        }
         return possible;
 }
 
