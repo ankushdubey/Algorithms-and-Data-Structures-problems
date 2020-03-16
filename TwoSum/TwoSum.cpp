@@ -35,7 +35,7 @@ public:
 		if(flag==1)
 		{
 			int ctr=0;
-			for(int i=0;i<nums.size();i++)
+			for(int i=0;i<(int)nums.size();i++)
 			{
 				if(nums[i]==val)
 				{
