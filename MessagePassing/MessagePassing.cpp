@@ -2,7 +2,7 @@
 using namespace std;
 
 // Implement your solution by completing the below function
-vector<int> spiralOrder(vector<vector<int> > &matrix)
+vector<int> spiralOrder(vector<vector<int>> &matrix)
 {
         vector<int> res;
         if (matrix.size() == 0)
@@ -38,10 +38,10 @@ vector<int> spiralOrder(vector<vector<int> > &matrix)
         }
         return res;
 }
-vector<vector<int> > merge(vector<vector<int> > &intervals)
+vector<vector<int>> merge(vector<vector<int>> &intervals)
 {
         long long sz = intervals.size();
-        vector<vector<int> > res(sz);
+        vector<vector<int>> res(sz);
         if (intervals.size() == 0)
                 return res;
         if (intervals.size() != 0 && intervals[0].size() == 0)
@@ -51,7 +51,7 @@ vector<vector<int> > merge(vector<vector<int> > &intervals)
         if (intervals.size() == 2)
         {
                 sort(intervals.begin(), intervals.end());
-                vector<vector<int> > ans(1);
+                vector<vector<int>> ans(1);
                 if (intervals[0][1] >= intervals[1][0])
                 {
                         ans[0].push_back(min(intervals[0][0], intervals[1][0]));
@@ -100,7 +100,7 @@ vector<vector<int> > merge(vector<vector<int> > &intervals)
                 res[ctr].push_back(intervals[sz - 1][0]);
                 res[ctr].push_back(intervals[sz - 1][1]);
         }
-        vector<vector<int> > ans;
+        vector<vector<int>> ans;
         for (int i = 0; i < (int)res.size(); i++)
         {
                 if (res[i].size() > 0)
@@ -110,12 +110,12 @@ vector<vector<int> > merge(vector<vector<int> > &intervals)
 
         return ans;
 }
-bool canMessageBePassed(int n, vector<vector<int> > maze)
+bool canMessageBePassed(int n, vector<vector<int>> maze)
 {
         bool possible = true;
         vector<int> spi = spiralOrder(maze);
 
-        vector<vector<int> > ranges((int)spi.size());
+        vector<vector<int>> ranges((int)spi.size());
         int ctr = 0;
         for (int i = 0; i < (int)spi.size(); ++i)
         {
@@ -127,10 +127,10 @@ bool canMessageBePassed(int n, vector<vector<int> > maze)
                 }
         }
 
-        vector<vector<int> > ans = merge(ranges);
-        int lst=ans.size();
-        if(ans[lst-1][1] < n*n - 1)
-            possible=false;
+        vector<vector<int>> ans = merge(ranges);
+        int lst = ans.size();
+        if (ans[lst - 1][1] < n * n - 1)
+                possible = false;
 
         return possible;
 }
@@ -143,7 +143,7 @@ int main()
         assert(1 <= s && s <= 1e5);
         assert(1 <= m && m <= 1e5);
 
-        vector<vector<int> > maze(n, vector<int>(n, 0));
+        vector<vector<int>> maze(n, vector<int>(n, 0));
         maze[0][0] = s;
 
         for (int i = 0; i < m; ++i)
