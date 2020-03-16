@@ -14,7 +14,7 @@ public:
 		for(int i=0;i<(int)nums.size();i++)
 		{
 			mp[nums[i]]=i;
-			mp[nums[i]]++;
+			mp2[nums[i]]++;
 		}
 		int flag=0,val;
 		for(int i=0;i<(int)nums.size();i++)
