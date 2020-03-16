@@ -6,6 +6,10 @@ class ValidParenthesis {
 public:
     // Implement your solution by completing the below function	
     bool isValid(string s) {
+	if(s.size()==0)
+	return true;
+	if(s.size()==1)
+	return false;
 	stack<char> st;
 	int flag=0;
 	for(int i=0;i<(int)s.size();i++)
