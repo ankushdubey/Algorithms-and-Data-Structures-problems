@@ -6,6 +6,37 @@ class ValidParenthesis {
 public:
     // Implement your solution by completing the below function	
     bool isValid(string s) {
+	stack<char> st;
+	int flag=0;
+	for(int i=0;i<(int)s.size();i++)
+	{
+		if(s[i]=='['||s[i]=='{'||s[i]=='(')
+		{
+			st.push(s[i]);
+		}
+		else
+		{
+			if(st.top()=='[' && (s[i]==')' || s[i]=='}'))
+			{
+				flag=1;
+			}
+			if(st.top()=='{' && (s[i]==']' || s[i]==')'))
+			{
+				flag=1;
+			}
+			if(st.top()=='(' && (s[i]=='}' || s[i]==']'))
+			{
+				flag=1;
+			}
+			st.pop();
+		}
+		if(flag==1 || st.size()>0)
+		{
+			return false;
+		}
+
+		return true;
+	}
 	return true;
     }
 };
