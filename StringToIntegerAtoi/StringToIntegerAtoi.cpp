@@ -5,8 +5,8 @@ using namespace std;
 class StringToIntegerAtoi {
 public:
     // Implement your solution by completing the below function	
-    int myAtoi(string str) {
-    	int ans = 0;
+    long long myAtoi(string str) {
+    	long long ans = 0;
 		if(str.size()==0)
 			return ans;
 		string fin="";
@@ -60,7 +60,7 @@ int main() {
 	FastIO();
 	string str;
 	cin >> str;
-	int result = StringToIntegerAtoi().myAtoi(str);
+	long long result = StringToIntegerAtoi().myAtoi(str);
 	cout << result;
 	return 0;
 }
