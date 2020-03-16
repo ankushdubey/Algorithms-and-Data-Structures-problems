@@ -33,14 +33,13 @@ public:
 			}
 			st.pop();
 		}
-		if(flag==1 || st.size()>0)
+	}
+	if(flag==1 || st.size()>0)
 		{
 			return false;
 		}
 
 		return true;
-	}
-	return true;
     }
 };
 
