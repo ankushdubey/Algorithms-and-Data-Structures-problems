@@ -19,14 +19,17 @@ public:
 			if(st.top()=='[' && (s[i]==')' || s[i]=='}'))
 			{
 				flag=1;
+				break;
 			}
 			if(st.top()=='{' && (s[i]==']' || s[i]==')'))
 			{
 				flag=1;
+				break;
 			}
 			if(st.top()=='(' && (s[i]=='}' || s[i]==']'))
 			{
 				flag=1;
+				break;
 			}
 			st.pop();
 		}
