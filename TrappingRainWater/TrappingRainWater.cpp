@@ -10,6 +10,10 @@ public:
 	int trap(vector<int> &height)
 	{
 		int n = height.size();
+		if(n==0)
+			return 0;
+		if(n==1)
+			return 0;
 		long long ans = 0;
 		int mx_arr[n], mn_arr[n];
 		int mx = height[n - 1];
